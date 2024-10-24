@@ -51,7 +51,7 @@ msgstr "Salvar"
 #: components/Block/View
 # defaultMessage: Technically required
 msgid "Technically required"
-msgstr "Tecnicamente requerido"
+msgstr "Essenciais"
 
 #: components/Banner/Banner
 # defaultMessage: To give you the best possible user experience, we use cookies on our website. Cookies required for the operation of the site are set automatically. You can also allow other cookies. You can {agree_all_cookies} or {adjust_privacy_settings}.
@@ -62,7 +62,7 @@ msgstr "Para dar à você a melhor experiência de usuário possível, utilizamo
 #: components/Block/View
 # defaultMessage: Tracking
 msgid "Tracking"
-msgstr "Tracking"
+msgstr "Analíticos"
 
 #: components/Banner/Banner
 # defaultMessage: You can find more information on the used cookies and how you can subsequently revoke your consent in our
