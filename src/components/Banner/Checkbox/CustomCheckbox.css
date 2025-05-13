@@ -1,0 +1,60 @@
+.toggle-container, .custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox {
+  width: 22%;
+  place-content: space-between;
+
+}
+
+.toggle-container input {
+  position: absolute;
+  z-index: 300;
+  width: 50px;
+  height: 25px;
+  opacity: 0 !important;
+  cursor: pointer;
+   
+}
+
+.slider {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.slider>img {
+  fill: white;
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  align-self: anchor-center;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  left: 2px;
+}
+
+input:checked + .slider {
+}
+
+input:checked + .slider>img {
+  transform: translateX(100%);
+  background-color: #2d6a4f;
+}
+
+.label-text {
+  font-size: 18px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
