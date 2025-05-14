@@ -11,6 +11,7 @@ import Matomo from './Matomo';
 import { BodyClass } from '@plone/volto/helpers';
 
 import { hideDSGVOBanner } from '../../actions';
+import CustomCheckbox from './Checkbox/CustomCheckbox';
 
 const messages = defineMessages({
   technically_required: {
@@ -198,18 +199,9 @@ const Banner = (props) => {
               </p>
             </Modal.Content>
             <Modal.Actions>
-              <Button
-                className={bannerAgreeButton}
-                onClick={() => confirmAll()}
-              >
-                <FormattedMessage
-                  id="Agree to all cookies"
-                  defaultMessage="Agree to all cookies"
-                />
-              </Button>
               {modules.length > 0 && (
                 <Button
-                  className={bannerAdjustButton + ' inverted'}
+                  className={'invertedButton'}
                   onClick={() => setConfigureCookies(true)}
                 >
                   <FormattedMessage
@@ -218,6 +210,15 @@ const Banner = (props) => {
                   />
                 </Button>
               )}
+              <Button
+                className={'bannerAgreeButton'}
+                onClick={() => confirmAll()}
+              >
+                <FormattedMessage
+                  id="Agree to all cookies"
+                  defaultMessage="Agree to all cookies"
+                />
+              </Button>
             </Modal.Actions>
           </>
         ) : (
@@ -229,10 +230,10 @@ const Banner = (props) => {
                   defaultMessage="Privacy Notice"
                 />
               </h2>
-              <Form>
+              <Form className="dsgvo-form">
                 {showTechnicallyRequired && (
                   <Form.Field>
-                    <Checkbox
+                    <CustomCheckbox
                       toggle
                       label={intl.formatMessage(messages.technically_required)}
                       checked
@@ -242,7 +243,7 @@ const Banner = (props) => {
                 )}
                 {includes(modules, 'tracking') && (
                   <Form.Field>
-                    <Checkbox
+                    <CustomCheckbox
                       toggle
                       label={intl.formatMessage(messages.tracking)}
                       onChange={() => setConfirmTracking(!confirmTracking)}
@@ -252,7 +253,7 @@ const Banner = (props) => {
                 )}
                 {includes(modules, 'youtube') && (
                   <Form.Field>
-                    <Checkbox
+                    <CustomCheckbox
                       toggle
                       label="Youtube"
                       onChange={() => setConfirmYoutube(!confirmYoutube)}
@@ -262,7 +263,7 @@ const Banner = (props) => {
                 )}
                 {includes(modules, 'facebook') && (
                   <Form.Field>
-                    <Checkbox
+                    <CustomCheckbox
                       toggle
                       label="Facebook"
                       onChange={() => setConfirmFacebook(!confirmFacebook)}
@@ -272,7 +273,7 @@ const Banner = (props) => {
                 )}
                 {includes(modules, 'google') && (
                   <Form.Field>
-                    <Checkbox
+                    <CustomCheckbox
                       toggle
                       label="Google"
                       onChange={() => setConfirmGoogle(!confirmGoogle)}
@@ -282,7 +283,7 @@ const Banner = (props) => {
                 )}
                 {includes(modules, 'vimeo') && (
                   <Form.Field>
-                    <Checkbox
+                    <CustomCheckbox
                       toggle
                       label="Vimeo"
                       onChange={() => setConfirmVimeo(!confirmVimeo)}
@@ -292,7 +293,7 @@ const Banner = (props) => {
                 )}
                 {includes(modules, 'twitter') && (
                   <Form.Field>
-                    <Checkbox
+                    <CustomCheckbox
                       toggle
                       label="Twitter"
                       onChange={() => setConfirmTwitter(!confirmTwitter)}
@@ -304,23 +305,20 @@ const Banner = (props) => {
             </Modal.Content>
             <Modal.Actions>
               <Button
-                className="back"
+                className="backButton"
                 onClick={() => setConfigureCookies(false)}
               >
                 {'< '}
                 <FormattedMessage id="Back" defaultMessage="Back" />
               </Button>
-              <Button
-                className={bannerAgreeButton}
-                onClick={() => confirmAll()}
-              >
+              <Button className={'invertedButton'} onClick={() => confirmAll()}>
                 <FormattedMessage
                   id="Agree to all cookies"
                   defaultMessage="Agree to all cookies"
                 />
               </Button>
               <Button
-                className={bannerAdjustButton}
+                className={'bannerAgreeButton'}
                 onClick={() => confirmSelection()}
               >
                 <FormattedMessage id="Save" defaultMessage="Save" />
