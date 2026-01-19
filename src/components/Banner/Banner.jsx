@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { includes, isObject } from 'lodash';
-import { Button, Modal, Checkbox, Form } from 'semantic-ui-react';
+import { Button, Modal, Form } from 'semantic-ui-react';
 import { useCookies } from 'react-cookie';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -31,10 +31,8 @@ const Banner = (props) => {
   const [configureCookies, setConfigureCookies] = useState(false);
   const showTechnicallyRequired =
     config.settings.DSGVOBanner.showTechnicallyRequired;
-  const bannerAgreeButton =
-    config.settings.DSGVOBanner.cssClasses.bannerAgreeButton;
-  const bannerAdjustButton =
-    config.settings.DSGVOBanner.cssClasses.bannerAdjustButton;
+  //const bannerAgreeButton = config.settings.DSGVOBanner.cssClasses.bannerAgreeButton;
+  //const bannerAdjustButton = config.settings.DSGVOBanner.cssClasses.bannerAdjustButton;
   const showConfirmModal = config.settings.DSGVOBanner.showBanner
     ? !Number(cookies.confirm_cookies) || props.show
     : props.show;

@@ -22,7 +22,7 @@ const IfConfirm = ({ children, module, showDSGVOBanner }) => {
               id="You can not view this content at this moment because you have selected to disable {module} cookies in the privacy settings."
               defaultMessage="You can not view this content at this moment because you have selected to disable {module} cookies in the privacy settings."
               values={{
-                module: <span style="font-weight: bold;">{module}</span>,
+                module: <span style={{ fontWeight: 'bold' }}>{module}</span>,
               }}
             />
           </p>

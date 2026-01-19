@@ -1,4 +1,5 @@
-.toggle-container, .custom-checkbox {
+.toggle-container,
+.custom-checkbox {
   display: flex;
   align-items: center;
 }
@@ -6,7 +7,6 @@
 .custom-checkbox {
   width: 22%;
   place-content: space-between;
-
 }
 
 .toggle-container input {
@@ -14,9 +14,8 @@
   z-index: 300;
   width: 50px;
   height: 25px;
-  opacity: 0 !important;
   cursor: pointer;
-   
+  opacity: 0 !important;
 }
 
 .slider {
@@ -24,30 +23,30 @@
   width: 50px;
   height: 30px;
   border: 1px solid #ccc;
+  margin-right: 10px;
   background-color: white;
   border-radius: 25px;
   transition: background-color 0.3s;
-  margin-right: 10px;
 }
 
-.slider>img {
-  fill: white;
+.slider > img {
   position: absolute;
-  height: 22px;
+  left: 2px;
   width: 22px;
+  height: 22px;
   align-self: anchor-center;
   background-color: #ccc;
   border-radius: 50%;
+  fill: white;
   transition: transform 0.3s;
-  left: 2px;
 }
 
 input:checked + .slider {
 }
 
-input:checked + .slider>img {
-  transform: translateX(100%);
+input:checked + .slider > img {
   background-color: #2d6a4f;
+  transform: translateX(100%);
 }
 
 .label-text {
@@ -55,6 +54,6 @@ input:checked + .slider>img {
 }
 
 .disabled {
-  opacity: 0.5;
   cursor: not-allowed;
+  opacity: 0.5;
 }
