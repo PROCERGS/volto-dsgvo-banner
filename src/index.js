@@ -36,11 +36,11 @@ const applyConfig = (config) => {
     privacy_url: '/privacy',
     ...(config.settings.DSGVOBanner || {}),
   };
-  config.settings.loadables['reactGa'] = loadable.lib(
-    () => import('react-ga4'),
+  config.settings.loadables['reactGa'] = loadable.lib(() =>
+    import('react-ga4'),
   );
-  config.settings.loadables['matomoTracker'] = loadable.lib(
-    () => import('@datapunt/matomo-tracker-js'),
+  config.settings.loadables['matomoTracker'] = loadable.lib(() =>
+    import('@datapunt/matomo-tracker-js'),
   );
   config.blocks.blocksConfig.dsgvoBanner = {
     id: 'dsgvoBanner',
