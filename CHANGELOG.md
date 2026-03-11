@@ -8,6 +8,13 @@
 
 <!-- towncrier release notes start -->
 
+## 2.3.3 (2026-03-11)
+
+### Bugfix
+
+- Corrige acessibilidade (@andressasias-procergs)
+
+
 ## 2.3.2 (2024-01-12)
 
 ### Bugfix
